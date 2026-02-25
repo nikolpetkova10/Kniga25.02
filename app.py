@@ -21,7 +21,7 @@ if st.button("Show all books"):
     for book in st.session_state.books:
       st.write("Title", book["title"])
       st.write("Author", book["author"])
-      st.write("Price"), book["price"])
+      st.write("Price", book["price"])
       st.write("-----------------------")
 st.header("Find by author")
 search_author = st.text_input("Enter the name of the author")
