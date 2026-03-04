@@ -1,5 +1,5 @@
 import streamlit as st
-st.title("Prilojenie")
+st.title("Book")
 if "books" not in st.session_state:
   st.session_state.books = []
   st.header("Add a book")
@@ -8,9 +8,9 @@ if "books" not in st.session_state:
   price = st.number_input("Price")
 if st.button("Add the book"):
   book = {
-    "title": title,
-    "author": author,
-    "price": price
+    "Title": title,
+    "Author": author,
+    "Price": price
   }
   st.session_state.books.append(book)
   st.success("The book is added")
@@ -19,9 +19,9 @@ if st.button("Show all books"):
     st.write("There's no books added.")
   else:
     for book in st.session_state.books:
-      st.write("Title", book["title"])
-      st.write("Author", book["author"])
-      st.write("Price", book["price"])
+      st.write("Title", book["Title"])
+      st.write("Author", book["Author"])
+      st.write("Price", book["Price"])
       st.write("-----------------------")
 st.header("Find by author")
 search_author = st.text_input("Enter the name of the author")
